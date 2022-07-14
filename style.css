@@ -1,0 +1,73 @@
+body {
+  background-color: rgb(161, 100, 223);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  grid-template-columns: max-content max-content max-content max-content max-content max-content;
+  grid-column-gap: 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#button1,
+#button2,
+#button3,
+#button4,
+#button5,
+#button6 {
+  width: 150px;
+  height: 100px;
+  font-size: 20px;
+  background-color: rgb(102, 52, 153);
+  border-radius: 5px;
+  border: none;
+  border-color: rgb(102, 52, 153);
+  color: white;
+}
+
+#button1:hover {
+  opacity: 0.9;
+}
+#button2:hover {
+  opacity: 0.9;
+}
+
+@media only screen and (max-width: 1116px) {
+  #container {
+    grid-template-columns: max-content max-content max-content max-content max-content;
+    grid-template-rows: auto;
+    grid-row-gap: 50px;
+    justify-content: center;
+    /*flex: 0 0 calc(20% - 40px);*/
+    place-items: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  #container {
+    grid-template-rows: auto auto;
+  }
+  #button1 {
+    margin-left: 20px;
+  }
+  #button3 {
+    /*margin-right: 10px;*/
+  }
+  #button6 {
+    margin: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 543px) {
+  #button6,
+  #button1 {
+    margin: 0 0;
+  }
+}
